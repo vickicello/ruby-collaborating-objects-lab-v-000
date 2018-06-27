@@ -20,6 +20,7 @@ end
 
 def add_song(song)
   @songs << Song.new
+end
 
 def self.find_or_create_by_name(name)
     if self.artist

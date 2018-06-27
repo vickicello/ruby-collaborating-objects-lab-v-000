@@ -20,6 +20,15 @@ end
 
 
 def self.find_or_create_by_name
+  if self.artist
+
+  else
+  end
+end
+
+def print_songs
+  @songs
+end
 
 
 end

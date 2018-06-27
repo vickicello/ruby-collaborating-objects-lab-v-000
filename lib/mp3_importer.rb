@@ -7,12 +7,12 @@ attr_accessor :path
   end
 
   def files
-    
+    @files ||= Dir.glob("#{path}/*.mp3").collect{ |f| f.gsub("#{path}/", "") }
   end
 
 
   def import
-    Song.new_by_filename(some_filename)
+    files.ach { |f| Song.new_by_filename(f) }
   end
 
 end

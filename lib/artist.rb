@@ -25,11 +25,15 @@ def self.find(name)
   self.all.find { |artist|  artist.name == name }
 end
 
-def self.find_or_create_by_name(artist)
+def self.create(name)
+  artist = self.new(name)
+  artist.save
+  artist
+end
 
-    if artist.name == nil
-      artist.name = Artist
-  end
+
+def self.find_or_create_by_name(name)
+  self.find(name) ? self.find(name) : self.create(name)
 end
 
 

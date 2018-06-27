@@ -21,15 +21,16 @@ def add_song(song)
   @songs << song
 end
 
-def self.find_or_create_by_name(Artist)
+def self.find_or_create_by_name(artist)
     self.all.find { |artist|  artist.name == name}
-    
+    if artist.name == nil
+
   end
 end
 
 
 def print_songs
-  @songs
+  puts @songs
 end
 
 

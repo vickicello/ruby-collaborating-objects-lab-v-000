@@ -4,7 +4,7 @@ attr_accessor :name, :songs
 
 @@all = []
 
-def initialize(name)
+def initialize(name = nil, songs)
   @name = name
   @songs = []
 end
@@ -19,8 +19,13 @@ def save
 end
 
 
-def self.find_or_create_by_name
-  if self.artist
+def self.find_or_create_by_name(name)
+    if self.artist
+      self.artist.name
+    else
+      nil
+    end
+  end
 
   else
   end

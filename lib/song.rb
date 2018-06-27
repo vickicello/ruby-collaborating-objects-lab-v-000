@@ -4,10 +4,8 @@ class Song
 
   @@all = []
 
-  def initialize(name, artist = nil)
+  def initialize(name)
       @name = name
-      @artist = artist
-      @@all << self
   end
 
   def artist_name
@@ -22,8 +20,8 @@ class Song
       @@all
     end
 
-def self.new_by_filename(filename)
+  def self.new_by_filename(filename)
 
-end
+  end
 
 end

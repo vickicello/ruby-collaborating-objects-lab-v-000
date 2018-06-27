@@ -27,9 +27,6 @@ def self.find_or_create_by_name(name)
     end
   end
 
-  else
-  end
-end
 
 def print_songs
   @songs

@@ -18,6 +18,8 @@ def save
  @@all << self
 end
 
+def add_song(song)
+  
 
 def self.find_or_create_by_name(name)
     if self.artist

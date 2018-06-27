@@ -4,7 +4,7 @@ attr_accessor :name, :songs
 
 @@all = []
 
-def initialize(name = nil, songs)
+def initialize(name, songs)
   @name = name
   @songs = []
 end

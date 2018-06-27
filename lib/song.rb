@@ -21,7 +21,6 @@ def initialize(name, artist = nil)
     def self.all
       @@all
     end
-end
 
 def self.new_by_filename(filename)
 

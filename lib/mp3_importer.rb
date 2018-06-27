@@ -7,12 +7,12 @@ attr_accessor :path
   end
 
   def files
-    @files ||= Dir.glob("#{path}/*.mp3").collect{ |filename| filename.gsub("#{path}/", "") }
+    @files ||= Dir.glob("#{path}/*.mp3").collect{ |f| f.gsub("#{path}/", "") }
   end
 
 
   def import
-    files.each { |filename| Song.new_by_filename(filename) }
+    files.each { |f| Song.new_by_filename(f) }
   end
 
 end
